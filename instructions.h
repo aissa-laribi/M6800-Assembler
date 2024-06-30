@@ -9,16 +9,19 @@
 #include <strings.h>
 
 
-typedef struct {
+/*typedef struct {
     char mnemo[4];
     uint8_t length;
-} Operand;
+} Operand; */
 
 typedef struct {
-    char mnemo[4];
-    uint8_t opcode;       /* Opcode of the instruction */
+    uint8_t opcode;
+    int operand;
+    //InstructionSetPtr next;
+
+           /* Opcode of the instruction */
     //Operand mode;       /* Addressing mode*/
 
-} Instruction;
+} InstructionSet;
 
 #endif

@@ -20,7 +20,7 @@ int main(int args, char **argv){
     scanf("%s", filename);
     static char buffer[120];
 
-    InstructionFlags current_instruction_flag;
+    static InstructionFlags current_instruction_flag;
     init_instruction_flags(current_instruction_flag);
 
     FILE *file;
@@ -37,7 +37,7 @@ int main(int args, char **argv){
             }
 
             if( fgets(buffer, sizeof(buffer), file) != NULL  ){
-                line_parser(buffer, strlen(buffer), current_instruction_flag);
+                line_parser(buffer, current_instruction_flag);
             }
             //Process the line
         }
