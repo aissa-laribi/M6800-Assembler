@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 typedef struct{
-    bool opcode_fetching;
-    bool opcode_fetched;
-    char opcode[5];
+    bool instruction_fetching;
+    bool instruction_fetched;
+    char instruction[5];
     bool operand_fetching;
     bool operand_fetched;
     char operand[8]; /*The longest operand will be like $FFFF,X*/

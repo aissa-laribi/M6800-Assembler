@@ -26,19 +26,20 @@ int main(int args, char **argv){
     FILE *file;
 
     if((file = fopen(filename, "r+")) == NULL){
-        printf("Cannot open  ");
+        printf("Cannot open  %s\n", filename);
     } else {
-        printf("successfully open\n");
+        printf("%s successfully opened\n", filename);
         while(!feof(file)){
+            //memset(&current_instruction_flag, 0, sizeof(current_instruction_flag));
             if(current_instruction_flag.error){
                 fclose(file);
                 break;
             }
-            printf("%s", buffer);
-            fgets(buffer, sizeof(buffer), file);
+
+            if( fgets(buffer, sizeof(buffer), file) != NULL  ){
+                line_parser(buffer, strlen(buffer), current_instruction_flag);
+            }
             //Process the line
-            line_parser(buffer, strlen(buffer), current_instruction_flag);
-            printf("%lu", strlen(buffer));
         }
         fclose(file);
     }

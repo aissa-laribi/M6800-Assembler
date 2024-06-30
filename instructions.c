@@ -14,4 +14,4 @@ Operand IDX = {"IDX", 2};
 Operand INH = {"INH", 1};
 Operand REL = {"REL", 2};
 
-Instruction ABA = {"ABA", 27, 1};
+Instruction ABA = {"ABA", 27};
