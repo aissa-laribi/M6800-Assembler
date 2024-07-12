@@ -1,3 +1,11 @@
+/*************************************************************************************************************
+ * TODOS:                                                                                                    *
+ *        #Keep test on hippy instructions's syntax for ACC mode                                                           *                                                                                                   
+ *        #Finish instruction checker                                                                        *                                                                                                  
+ *        #Construct, validate and return opcode of instruction and operands                                 *
+ *        #Return hex or decimal value of operand                                                            *
+ *************************************************************************************************************/
+
 #include "instructions.h"
 #include "parser.h"
 #include <stdbool.h>
@@ -5,14 +13,6 @@
 #include <stdlib.h>
 #include <strings.h>
 
-/*Addresing modes:
-    ACC-Accumulator: ex: ABA 1-byte
-    IMM: ex: LDAA #$25 loads 25 TO acc A 2-bytes
-    DIR: ex: LDAA $25 loads content of mem address 25 2-bytes
-    EXT: ex: LDAA $1000 loads content of mem address 1000 3-bytes(1 opcode, 2 for operand)
-    IDX: ex: LDAA $10,X loads content of address 1010 after LDX #$1000 loads address 1000 to IR, 
-    INH: No Operand needed ex: INCA or DECB
-    REL: ex: BRA OFH jumps 0F offset of current address*/
     
 int main(int args, char **argv){
     printf("Enter assembly file\n");

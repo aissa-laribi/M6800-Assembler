@@ -1,2 +1,8 @@
 LDAA #$25;
 LDAB #$26;
+ABA;
+ABA;
+LDAA $25;
+LDX #$1000;
+LDAA $10,X;
+BRA OFH;
