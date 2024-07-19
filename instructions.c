@@ -1,4 +1,5 @@
 #include "instructions.h"
+#include "parser.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,3 +21,12 @@ Operand REL = {"REL", 2};*/
             if(Operand )
     }
 }*/
+
+InstructionOpcode opcode(InstructionMnemo mnemo, InstructionMode mode){
+    //In decimal
+    InstructionOpcode instructionopcode[] = {
+        { {"ABA", ABA}, {"ONEBYTE", ONEBYTE, 0}, 27},
+        { {"LDAA", LDAA}, {"IMM", IMM}, 134 },
+    };
+
+}

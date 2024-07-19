@@ -1,9 +1,8 @@
 /*************************************************************************************************************
  * TODOS:                                                                                                    *
- *        #Keep test on hippy instructions's syntax for ACC mode                                                           *                                                                                                   
- *        #Finish instruction checker                                                                        *                                                                                                  
- *        #Construct, validate and return opcode of instruction and operands                                 *
- *        #Return hex or decimal value of operand                                                            *
+ *        #Improve IDX operand type parsing                                                                  *                                                                             *                                                                                                                                                         
+ *        #Continue operand value parsing for LDX, REL addressing modes                                      *
+ *        #ERROR HANDLING(Wrong syntax, operand exceedings bytes capacity of addressing modes)               *                                   
  *************************************************************************************************************/
 
 #include "instructions.h"

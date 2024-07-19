@@ -1,7 +1,7 @@
 #ifndef __INSTRUCTIONS_H
 #define __INSTRUCTIONS_H
 
-
+#include "parser.h"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -13,15 +13,12 @@
     char mnemo[4];
     uint8_t length;
 } Operand; */
+typedef struct{
+    InstructionMnemo mnemo;
+    InstructionMode mode;
+    int result;
+} InstructionOpcode; 
 
-typedef struct {
-    uint8_t opcode;
-    int operand;
-    //InstructionSetPtr next;
-
-           /* Opcode of the instruction */
-    //Operand mode;       /* Addressing mode*/
-
-} InstructionSet;
+InstructionOpcode opcode(InstructionMnemo mnemo, InstructionMode mode);
 
 #endif
